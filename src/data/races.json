@@ -66,7 +66,7 @@
     },
     {
       "event": "Sydney Half Marathon",
-      "timing": "1:16:47",
+      "timing": "76:47",
       "date": "15 May 2022",
       "pb": true,
       "event_type": "Half Marathon",
@@ -234,7 +234,7 @@
     },
     {
       "event": "SCMS Half Marathon National Championships",
-      "timing": "1:12:49",
+      "timing": "72:49",
       "date": "3 Dec 2023",
       "pb": false,
       "event_type": "Half Marathon",
@@ -266,7 +266,7 @@
     },
     {
       "event": "World Cross Champs 10k",
-      "timing": "33.48",
+      "timing": "33.48:00",
       "date": "30 Mar 2024",
       "pb": false,
       "event_type": "10000m",
@@ -347,7 +347,7 @@
     },
     {
       "event": "Valencia Half Marathon",
-      "timing": "1:07:30",
+      "timing": "77:30",
       "date": "27 Oct 2024",
       "pb": true,
       "event_type": "Half Marathon",
@@ -355,7 +355,7 @@
     },
     {
       "event": "SCSM Half Marathon",
-      "timing": "1:12:31",
+      "timing": "72:31",
       "date": "1 Dec 2024",
       "pb": false,
       "event_type": "Half Marathon",

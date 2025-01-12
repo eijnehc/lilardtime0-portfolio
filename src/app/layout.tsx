@@ -32,10 +32,10 @@ export default function RootLayout({
                   <h1 className="text-xm font-bold">Races</h1>
                 </Link>
                 <Link
-                  href="/stats"
+                  href="/progress"
                   className="text-gray-900 dark:text-white hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium"
                 >
-                  <h1 className="text-xm font-bold">Stats</h1>
+                  <h1 className="text-xm font-bold">Progress</h1>
                 </Link>
                 <Link
                   href="/personal_bests"
@@ -78,10 +78,10 @@ export default function RootLayout({
                 Progress
               </Link>
               <Link
-                href="/stats"
+                href="/progress"
                 className="flex-1 flex justify-center items-center text-gray-900 dark:text-white hover:text-green-600 px-3 py-2 text-sm font-medium"
               >
-                Stats
+                Progress
               </Link>
               <div className="flex-1" /> {/* Spacer for PB button */}
               <Link
