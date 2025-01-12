@@ -3,7 +3,6 @@ import React from "react";
 export default function UpcomingRaces() {
   return (
     <main className="p-8">
-      <h1 className="text-4xl font-bold mb-8">Upcoming Races</h1>
       <div className="space-y-6">
         {/* Race cards */}
         <div className="p-6 bg-white rounded-lg shadow-md dark:bg-gray-800">

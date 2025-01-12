@@ -1,0 +1,44 @@
+{
+  "5000m": {
+    "event": "Taiwan Open 5k",
+    "timing": "15:08.11",
+    "date": "2 Jun 2024",
+    "location": "Taiwan"
+  },
+  "2400m": {
+    "event": "Pocari 2.4k Elite Men Race",
+    "timing": "6:53.90",
+    "date": "7 Sep 2024",
+    "location": "Singapore"
+  },
+  "10000m": {
+    "event": "10k Prix Race @Albert Park, Australia",
+    "timing": "31:00",
+    "date": "22 Sep 2024",
+    "location": "Australia"
+  },
+  "3000m": {
+    "event": "3k Internal TT",
+    "timing": "8:49.4",
+    "date": "23 May 2024",
+    "location": "Singapore"
+  },
+  "Half Marathon": {
+    "event": "Valencia Half Marathon",
+    "timing": "1:07:30",
+    "date": "27 Oct 2024",
+    "location": "Spain"
+  },
+  "1600m": {
+    "event": "UA x NUS All-Out Mile",
+    "timing": "4:49",
+    "date": "2 Jun 2022",
+    "location": "Singapore"
+  },
+  "1500m": {
+    "event": "AC3 1500m",
+    "timing": "4:08.63",
+    "date": "16 Mar 2024",
+    "location": "Singapore"
+  }
+}

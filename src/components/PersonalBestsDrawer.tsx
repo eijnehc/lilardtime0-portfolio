@@ -1,21 +1,39 @@
 "use client";
 
 import { Drawer } from "vaul";
+import personalBestData from "@/data/personal_best.json";
+import Link from "next/link";
 
-const personalBests = [
-  { distance: "1500m", time: "4:05", date: "May 15, 2023" },
-  { distance: "2400m", time: "7:45", date: "June 22, 2023" },
-  { distance: "3000m", time: "9:30", date: "July 8, 2023" },
-  { distance: "5000m", time: "16:45", date: "Aug 12, 2023" },
-  { distance: "10K", time: "35:20", date: "Sept 3, 2023" },
-  { distance: "Half Marathon", time: "1:25:30", date: "Oct 15, 2023" },
-];
+// Function to convert date string to URL-friendly format
+const formatDateForURL = (dateStr: string) => dateStr.replace(/ /g, "-");
 
 export function PersonalBestsDrawer() {
+  // Map to convert event types to numeric distances for sorting
+  const distanceMap: Record<string, number> = {
+    "1600m": 1600,
+    "1500m": 1500,
+    "2400m": 2400,
+    "3000m": 3000,
+    "5000m": 5000,
+    "10000m": 10000,
+    "Half Marathon": 21097, // in meters
+  };
+
+  // Sort the data based on distances
+  const personalBests = Object.entries(personalBestData)
+    .sort(([keyA], [keyB]) => distanceMap[keyA] - distanceMap[keyB])
+    .map(([distance, data]) => ({
+      distance,
+      time: data.timing,
+      date: data.date,
+      location: data.location,
+      event: data.event,
+    }));
+
   return (
     <Drawer.Root>
       <Drawer.Trigger>
-        <a className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 rounded-full bg-white text-blue-600 border-4 border-blue-600 flex items-center justify-center shadow-lg hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all">
+        <a className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 rounded-full bg-white text-green-600 border-4 border-green-600 flex items-center justify-center shadow-lg hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all">
           <span className="text-base font-semibold">PBs</span>
         </a>
       </Drawer.Trigger>
@@ -36,18 +54,27 @@ export function PersonalBestsDrawer() {
               >
                 <div className="inline-flex gap-4 pb-4 px-4">
                   {personalBests.map((pb) => (
-                    <div
+                    <Link
                       key={pb.distance}
-                      className="bg-gray-50 p-6 rounded-lg w-72 shrink-0"
+                      href={`/race/${formatDateForURL(pb.date)}`}
+                      className="block transition-transform hover:scale-105"
                     >
-                      <div className="flex flex-col space-y-2">
-                        <h3 className="font-semibold text-lg">{pb.distance}</h3>
-                        <div className="text-3xl font-bold text-blue-600">
-                          {pb.time}
+                      <div className="bg-gray-50 p-6 rounded-lg w-80 shrink-0 hover:shadow-lg transition-shadow">
+                        <div className="flex flex-col space-y-2">
+                          <h3 className="font-semibold text-lg">
+                            {pb.distance}
+                          </h3>
+                          <div className="text-3xl font-bold text-green-600">
+                            {pb.time}
+                          </div>
+                          <p className="text-sm text-gray-600">{pb.event}</p>
+                          <div className="flex justify-between text-sm text-gray-500">
+                            <span>{pb.date}</span>
+                            <span>{pb.location}</span>
+                          </div>
                         </div>
-                        <p className="text-sm text-gray-500">{pb.date}</p>
                       </div>
-                    </div>
+                    </Link>
                   ))}
                 </div>
               </div>

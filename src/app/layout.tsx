@@ -27,31 +27,31 @@ export default function RootLayout({
               <div className="flex space-x-8 items-center">
                 <Link
                   href="/"
-                  className="text-gray-900 dark:text-white hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+                  className="text-gray-900 dark:text-white hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium"
                 >
-                  Progression
+                  Races
                 </Link>
                 <Link
                   href="/stats"
-                  className="text-gray-900 dark:text-white hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+                  className="text-gray-900 dark:text-white hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium"
                 >
                   Stats
                 </Link>
                 <Link
                   href="/personal_bests"
-                  className="text-gray-900 dark:text-white hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+                  className="text-gray-900 dark:text-white hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium"
                 >
                   Personal Bests
                 </Link>
                 <Link
                   href="/upcoming_races"
-                  className="text-gray-900 dark:text-white hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+                  className="text-gray-900 dark:text-white hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium"
                 >
                   Upcoming Races
                 </Link>
                 <Link
                   href="/about"
-                  className="text-gray-900 dark:text-white hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+                  className="text-gray-900 dark:text-white hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium"
                 >
                   About Me
                 </Link>
@@ -73,26 +73,26 @@ export default function RootLayout({
             <div className="flex justify-between items-center h-16 bg-white dark:bg-gray-800 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)]">
               <Link
                 href="/"
-                className="flex-1 flex justify-center items-center text-gray-900 dark:text-white hover:text-blue-600 px-3 py-2 text-sm font-medium"
+                className="flex-1 flex justify-center items-center text-gray-900 dark:text-white hover:text-green-600 px-3 py-2 text-sm font-medium"
               >
                 Progress
               </Link>
               <Link
                 href="/stats"
-                className="flex-1 flex justify-center items-center text-gray-900 dark:text-white hover:text-blue-600 px-3 py-2 text-sm font-medium"
+                className="flex-1 flex justify-center items-center text-gray-900 dark:text-white hover:text-green-600 px-3 py-2 text-sm font-medium"
               >
                 Stats
               </Link>
               <div className="flex-1" /> {/* Spacer for PB button */}
               <Link
                 href="/upcoming_races"
-                className="flex-1 flex justify-center items-center text-gray-900 dark:text-white hover:text-blue-600 px-3 py-2 text-sm font-medium"
+                className="flex-1 flex justify-center items-center text-gray-900 dark:text-white hover:text-green-600 px-3 py-2 text-sm font-medium"
               >
                 Races
               </Link>
               <Link
                 href="/about"
-                className="flex-1 flex justify-center items-center text-gray-900 dark:text-white hover:text-blue-600 px-3 py-2 text-sm font-medium"
+                className="flex-1 flex justify-center items-center text-gray-900 dark:text-white hover:text-green-600 px-3 py-2 text-sm font-medium"
               >
                 About
               </Link>
