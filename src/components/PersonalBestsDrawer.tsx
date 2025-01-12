@@ -27,7 +27,7 @@ export function PersonalBestsDrawer() {
       </Drawer.Trigger>
       <Drawer.Portal>
         <Drawer.Content
-          className="bg-gray-900 flex flex-col rounded-t-[10px] h-[40%] mt-24 fixed bottom-0 left-0 right-0 w-full"
+          className="bg-gray-900 flex flex-col rounded-t-[10px] h-[45%] mt-24 fixed bottom-0 left-0 right-0 w-full"
           aria-describedby="personal-bests"
         >
           <div className="p-4 rounded-t-[10px] h-full">
