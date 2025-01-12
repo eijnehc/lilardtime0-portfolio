@@ -37,8 +37,8 @@ const RaceGame = () => {
 
   const convertTimeToSeconds = (timeString: string) => {
     if (typeof timeString !== "string") return 0;
-    const [minutes, seconds] = timeString.split(":").map(Number);
-    return minutes * 60 + parseFloat(seconds);
+    const [minutes, seconds] = timeString.split(":").map(String);
+    return Number(minutes) * 60 + Number(seconds);
   };
 
   // Function to calculate the finish line position based on track width
