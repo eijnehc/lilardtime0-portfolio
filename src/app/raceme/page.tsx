@@ -152,7 +152,7 @@ const RaceGame = () => {
               type="number"
               value={minutes}
               onChange={(e) => setMinutes(e.target.value)}
-              className="w-full p-2 border rounded-md bg-gray-800 text-white"
+              className="w-full p-2 border rounded-md bg-gray-800 text-white disabled:text-gray-500"
               min="0"
               disabled={isRacing}
             />
@@ -163,7 +163,7 @@ const RaceGame = () => {
               type="number"
               value={seconds}
               onChange={(e) => setSeconds(e.target.value)}
-              className="w-full p-2 border rounded-md bg-gray-800 text-white"
+              className="w-full p-2 border rounded-md bg-gray-800 text-white disabled:text-gray-400"
               min="0"
               max="59"
               step="0.01"
