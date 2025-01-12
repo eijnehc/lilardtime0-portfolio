@@ -1,11 +1,15 @@
-import React, { Usable } from "react";
+import React from "react";
 import Link from "next/link";
 import racesData from "@/data/races.json";
+import { formatDateFromURL } from "@/utils/dateFormat";
 
-// Function to convert date string to URL-friendly format and back
-const formatDateFromURL = (dateStr: string) => dateStr.replace(/-/g, " ");
+type RacePageProps = {
+  params: {
+    date: string;
+  };
+};
 
-export default async function RacePage({ params }) {
+export default async function RacePage({ params }: RacePageProps) {
   const { date } = await params;
   const formattedDate = formatDateFromURL(date);
   const race = racesData.races.find((r) => r.date === formattedDate);
@@ -15,7 +19,7 @@ export default async function RacePage({ params }) {
       <main className="p-8">
         <div className="max-w-3xl mx-auto">
           <Link
-            href="/" // Fallback to a page listing races (or your desired fallback route)
+            href="/race"
             className="inline-flex items-center text-green-600 hover:text-green-700 mb-8"
           >
             <svg
@@ -46,7 +50,7 @@ export default async function RacePage({ params }) {
     <main className="p-8">
       <div className="max-w-3xl mx-auto">
         <Link
-          href="/"
+          href="/race"
           className="inline-flex items-center text-green-600 hover:text-green-700 mb-8"
         >
           <svg
@@ -82,7 +86,7 @@ export default async function RacePage({ params }) {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="space-y-4">
               <div>
-                <h2 className="text-lg font-semibold text-gray-600 dark:text-gray-400">
+                <h2 className="text-lg font-semibold text-gray-400 dark:text-gray-400">
                   Time
                 </h2>
                 <p className="text-3xl font-bold text-green-600">
@@ -91,7 +95,7 @@ export default async function RacePage({ params }) {
               </div>
 
               <div>
-                <h2 className="text-lg font-semibold text-gray-600 dark:text-gray-400">
+                <h2 className="text-lg font-semibold text-gray-400 dark:text-gray-400">
                   Date
                 </h2>
                 <p className="text-xl">{race.date}</p>
@@ -101,7 +105,7 @@ export default async function RacePage({ params }) {
             <div className="space-y-4">
               {race.event_type && (
                 <div>
-                  <h2 className="text-lg font-semibold text-gray-600 dark:text-gray-400">
+                  <h2 className="text-lg font-semibold text-gray-400 dark:text-gray-400">
                     Event Type
                   </h2>
                   <p className="text-xl">{race.event_type}</p>

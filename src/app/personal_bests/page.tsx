@@ -1,9 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import personalBestData from "@/data/personal_best.json";
-
-// Function to convert date string to URL-friendly format
-const formatDateForURL = (dateStr: string) => dateStr.replace(/ /g, "-");
+import { formatDateForURL } from "@/utils/dateFormat";
 
 export default function PersonalBests() {
   // Map to convert event types to numeric distances for sorting
@@ -31,16 +29,16 @@ export default function PersonalBests() {
             href={`/race/${formatDateForURL(data.date)}`}
             className="block transition-transform hover:scale-105"
           >
-            <div className="p-6 bg-white rounded-lg shadow-md dark:bg-gray-800 hover:shadow-lg transition-shadow">
+            <div className="p-6 bg-white rounded-lg shadow-md dark:bg-gray-800 hover:brightness-150 transition-shadow">
               <h2 className="text-lg font-semibold mb-2">{distance}</h2>
               <div className="flex flex-col space-y-3">
                 <p className="text-3xl font-bold text-green-600">
                   {data.timing}
                 </p>
-                <p className="text-sm font-medium text-gray-600">
+                <p className="text-sm font-medium text-gray-400">
                   {data.event}
                 </p>
-                <div className="flex justify-between text-sm text-gray-600">
+                <div className="flex justify-between text-sm text-gray-400">
                   <span>{data.date}</span>
                   <span>{data.location}</span>
                 </div>

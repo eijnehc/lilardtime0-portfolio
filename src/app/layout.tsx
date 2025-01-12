@@ -29,31 +29,31 @@ export default function RootLayout({
                   href="/"
                   className="text-gray-900 dark:text-white hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium"
                 >
-                  Races
+                  <h1 className="text-xm font-bold">Races</h1>
                 </Link>
                 <Link
                   href="/stats"
                   className="text-gray-900 dark:text-white hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium"
                 >
-                  Stats
+                  <h1 className="text-xm font-bold">Stats</h1>
                 </Link>
                 <Link
                   href="/personal_bests"
                   className="text-gray-900 dark:text-white hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium"
                 >
-                  Personal Bests
+                  <h1 className="text-xm font-bold">Personal Bests</h1>
                 </Link>
                 <Link
                   href="/upcoming_races"
                   className="text-gray-900 dark:text-white hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium"
                 >
-                  Upcoming Races
+                  <h1 className="text-xm font-bold">Upcoming Races</h1>
                 </Link>
                 <Link
                   href="/about"
                   className="text-gray-900 dark:text-white hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium"
                 >
-                  About Me
+                  <h1 className="text-xm font-bold">About Me</h1>
                 </Link>
               </div>
             </div>
