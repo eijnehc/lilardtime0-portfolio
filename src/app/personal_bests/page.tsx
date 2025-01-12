@@ -26,7 +26,7 @@ export default function PersonalBests() {
         {sortedData.map(([distance, data]) => (
           <Link
             key={distance}
-            href={`/race/${formatDateForURL(data.date)}`}
+            href={`/races/${formatDateForURL(data.date)}`}
             className="block transition-transform hover:scale-105"
           >
             <div className="p-6 bg-white rounded-lg shadow-md dark:bg-gray-800 hover:brightness-150 transition-shadow">

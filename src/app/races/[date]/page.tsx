@@ -50,7 +50,7 @@ export default async function RacePage({ params }: RacePageProps) {
     <main className="p-8">
       <div className="max-w-3xl mx-auto">
         <Link
-          href="/race"
+          href="/races"
           className="inline-flex items-center text-green-600 hover:text-green-700 mb-8"
         >
           <svg

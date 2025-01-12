@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -32,14 +32,26 @@ const parseDate = (dateStr: string) => {
 };
 
 export default function RacesPage() {
+  const [isMobile, setIsMobile] = useState(false);
   // Sort races by date in descending order
   const sortedRaces = [...racesData.races].sort(
     (a, b) => parseDate(b.date).getTime() - parseDate(a.date).getTime()
   );
 
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 1024); // Check if screen width is less than 1024px
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize(); // Initial check
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <main className="p-8">
-      <VerticalTimeline lineColor="#16A34A">
+      <VerticalTimeline lineColor="#16A34A" animate={!isMobile}>
         {sortedRaces.map((race, index) => (
           <VerticalTimelineElement
             key={index}
@@ -49,10 +61,10 @@ export default function RacesPage() {
               color: "white",
               boxShadow: "0 3px 10px rgb(0 0 0 / 0.2)",
               padding: "2rem",
-              borderLeft: index % 2 === 0 ? "4px solid #16A34A" : undefined,
-              borderRight: index % 2 === 1 ? "4px solid #16A34A" : undefined,
+              borderLeft: "4px solid #16A34A",
+              borderRight: "4px solid #16A34A",
             }}
-            contentArrowStyle={{ borderRight: "7px solid #16A34A" }}
+            contentArrowStyle={{ borderRight: "12px solid #16A34A" }}
             date={race.date}
             iconStyle={{
               background: "#16A34A",
@@ -60,7 +72,7 @@ export default function RacesPage() {
             }}
           >
             <Link
-              href={`/race/${formatDateForURL(race.date)}`}
+              href={`/races/${formatDateForURL(race.date)}`}
               className="cursor-pointer"
             >
               <div className="flex flex-col space-y-2">
