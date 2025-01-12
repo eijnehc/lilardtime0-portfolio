@@ -3,13 +3,8 @@ import Link from "next/link";
 import racesData from "@/data/races.json";
 import { formatDateFromURL } from "@/utils/dateFormat";
 
-type RacePageProps = {
-  params: {
-    date: string;
-  };
-};
-
-export default async function RacePage({ params }: RacePageProps) {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export default async function RacePage({ params }: any) {
   const { date } = await params;
   const formattedDate = formatDateFromURL(date);
   const race = racesData.races.find((r) => r.date === formattedDate);
