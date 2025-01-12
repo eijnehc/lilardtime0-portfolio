@@ -55,10 +55,10 @@ export default function RootLayout({
                   <h1 className="text-xm font-bold">Upcoming Races</h1>
                 </Link>
                 <Link
-                  href="/about"
+                  href="/raceme"
                   className="text-gray-900 dark:text-white hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium"
                 >
-                  <h1 className="text-xm font-bold">About Me</h1>
+                  <h1 className="text-xm font-bold">Race Me</h1>
                 </Link>
               </div>
             </div>
@@ -93,13 +93,13 @@ export default function RootLayout({
                 href="/upcoming_races"
                 className="flex-1 flex justify-center items-center text-gray-900 dark:text-white hover:text-green-600 px-3 py-2 text-sm font-medium"
               >
-                Races
+                Upcoming
               </Link>
               <Link
-                href="/about"
+                href="/raceme"
                 className="flex-1 flex justify-center items-center text-gray-900 dark:text-white hover:text-green-600 px-3 py-2 text-sm font-medium"
               >
-                About
+                Race me
               </Link>
             </div>
           </div>

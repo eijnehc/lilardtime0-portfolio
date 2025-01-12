@@ -4,19 +4,9 @@ import { Drawer } from "vaul";
 import personalBestData from "@/data/personal_best.json";
 import Link from "next/link";
 import { formatDateForURL } from "@/utils/dateFormat";
+import { distanceMap } from "@/utils/distanceMap";
 
 export function PersonalBestsDrawer() {
-  // Map to convert event types to numeric distances for sorting
-  const distanceMap: Record<string, number> = {
-    "1600m": 1600,
-    "1500m": 1500,
-    "2400m": 2400,
-    "3000m": 3000,
-    "5000m": 5000,
-    "10000m": 10000,
-    "Half Marathon": 21097, // in meters
-  };
-
   // Sort the data based on distances
   const personalBests = Object.entries(personalBestData)
     .sort(([keyA], [keyB]) => distanceMap[keyA] - distanceMap[keyB])
