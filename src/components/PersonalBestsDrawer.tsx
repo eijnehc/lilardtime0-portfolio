@@ -21,7 +21,7 @@ export function PersonalBestsDrawer() {
   return (
     <Drawer.Root>
       <Drawer.Trigger>
-        <a className="absolute left-1/2 -translate-x-1/2 -translate-y-1/4 w-20 h-20 rounded-full bg-gray-800 text-green-600 border-4 border-green-600 flex items-center justify-center shadow-lg hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all">
+        <a className="absolute left-1/2 -translate-x-1/2 -translate-y-1/4 w-20 h-20 rounded-full bg-gray-800 text-green-600 border-4 border-green-600 flex items-center justify-center shadow-lg hover:bg-gray-900 transition-all">
           <span className="text-base font-semibold">SG</span>
         </a>
       </Drawer.Trigger>
