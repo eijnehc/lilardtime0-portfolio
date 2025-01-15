@@ -7,8 +7,8 @@ import { PersonalBestsDrawer } from "@/components/PersonalBestsDrawer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Portfolio",
-  description: "Personal portfolio website",
+  title: "Shaun Goh - lilardtime0",
+  description: "Shaun Goh Athletics Profile",
 };
 
 export default function RootLayout({
