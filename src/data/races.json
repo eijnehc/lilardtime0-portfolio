@@ -360,6 +360,22 @@
       "pb": false,
       "event_type": "Half Marathon",
       "video": null
+    },
+    {
+      "event": "AC1 1500m",
+      "timing": "4:04.94",
+      "date": "16 Feb 2025",
+      "pb": true,
+      "event_type": "1500m",
+      "video": "https://www.youtube.com/watch?v=vqFtOr91sa8"
+    },
+    {
+      "event": "Box Hill Burn Men 5000m",
+      "timing": "14:57.44",
+      "date": "6 Mar 2025",
+      "pb": true,
+      "event_type": "5000m",
+      "video": "https://www.youtube.com/watch?v=2aTc3_eWRxQ"
     }
   ]
 }

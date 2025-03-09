@@ -1,9 +1,9 @@
 {
   "5000m": {
-    "event": "Taiwan Open 5k",
-    "timing": "15:08.11",
-    "date": "2 Jun 2024",
-    "location": "Taiwan"
+    "event": "Box Hill Burn Men 5000m",
+    "timing": "14:57.44",
+    "date": "6 March 2025",
+    "location": "Australia"
   },
   "2400m": {
     "event": "Pocari 2.4k Elite Men Race",
@@ -36,9 +36,9 @@
     "location": "Singapore"
   },
   "1500m": {
-    "event": "AC3 1500m",
-    "timing": "4:08.63",
-    "date": "16 Mar 2024",
+    "event": "AC1 1500m",
+    "timing": "4:04.94",
+    "date": "16 Feb 2025",
     "location": "Singapore"
   }
 }

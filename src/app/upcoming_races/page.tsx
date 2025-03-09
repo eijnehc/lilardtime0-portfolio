@@ -5,8 +5,19 @@ export default function UpcomingRaces() {
   const currentDate = new Date();
 
   const filteredRaces = upcomingRaces.filter((race) => {
-    const raceDate = new Date(race.date);
-    return raceDate >= currentDate;
+    const parts = race.date.split(" ");
+    const monthName = parts[0];
+    const year = parseInt(parts[1]);
+
+    // Convert month name to month index (0-11)
+    const monthIndex = new Date(`${monthName} 1, 2000`).getMonth();
+
+    // Create a date object for the first day of the NEXT month
+    const nextMonth = new Date(year, monthIndex + 1, 1);
+
+    // Subtract one day to get the last day of the original month
+    const endOfMonth = new Date(nextMonth);
+    return endOfMonth >= currentDate;
   });
 
   return (
