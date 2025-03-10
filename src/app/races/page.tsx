@@ -9,6 +9,7 @@ import "react-vertical-timeline-component/style.min.css";
 import racesData from "@/data/races.json";
 import Link from "next/link";
 import { formatDateForURL } from "@/utils/dateFormat";
+import { ExternalLink } from "lucide-react";
 
 // Function to convert date string to Date object
 const parseDate = (dateStr: string) => {
@@ -71,41 +72,39 @@ export default function RacesPage() {
               color: "#fff",
             }}
           >
-            <Link
-              href={`/races/${formatDateForURL(race.date)}`}
-              className="cursor-pointer"
-            >
-              <div className="flex flex-col space-y-2">
-                <div className="flex items-start justify-between">
-                  <h3 className="text-xl font-bold">{race.event}</h3>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <span className="text-2xl font-bold text-green-600">
-                    {race.timing}
-                  </span>
-                  {race.pb && (
-                    <span className="bg-green-100 text-green-800 text-xm font-medium px-2.5 py-0.5 rounded flex items-center gap-1">
-                      PB
-                    </span>
-                  )}
-                  {race.cr && (
-                    <span className="bg-yellow-100 text-yellow-800 text-xm font-medium px-2.5 py-0.5 rounded flex items-center gap-1">
-                      CR
-                    </span>
-                  )}
-                  {race.national_record && (
-                    <span className="bg-red-100 text-red-800 text-xm font-medium px-2.5 py-0.5 rounded">
-                      NR
-                    </span>
-                  )}
-                </div>
-                {race.event_type && (
-                  <span className="text-sm text-gray-400">
-                    Event: {race.event_type}
-                  </span>
-                )}
-              </div>
-            </Link>
+            <div className="flex items-start justify-between">
+              <h3 className="text-xl font-bold flex justify-between items-center w-full">
+                {race.event}
+                <Link href={`/races/${formatDateForURL(race.date)}`}>
+                  <ExternalLink />
+                </Link>
+              </h3>
+            </div>
+            <div className="flex items-center space-x-2">
+              <span className="text-2xl font-bold text-green-600">
+                {race.timing}
+              </span>
+              {race.pb && (
+                <span className="bg-green-100 text-green-800 text-xm font-medium px-2.5 py-0.5 rounded flex items-center gap-1">
+                  PB
+                </span>
+              )}
+              {race.cr && (
+                <span className="bg-yellow-100 text-yellow-800 text-xm font-medium px-2.5 py-0.5 rounded flex items-center gap-1">
+                  CR
+                </span>
+              )}
+              {race.national_record && (
+                <span className="bg-red-100 text-red-800 text-xm font-medium px-2.5 py-0.5 rounded">
+                  NR
+                </span>
+              )}
+            </div>
+            {race.event_type && (
+              <span className="text-sm text-gray-400">
+                Event: {race.event_type}
+              </span>
+            )}
           </VerticalTimelineElement>
         ))}
       </VerticalTimeline>
