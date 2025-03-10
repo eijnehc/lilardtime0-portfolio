@@ -72,39 +72,43 @@ export default function RacesPage() {
               color: "#fff",
             }}
           >
-            <div className="flex items-start justify-between">
-              <h3 className="text-xl font-bold flex justify-between items-top w-full">
-                {race.event}
-                <Link href={`/races/${formatDateForURL(race.date)}`}>
-                  <ExternalLink />
-                </Link>
-              </h3>
+            <div className="flex flex-col space-y-2">
+              <div className="flex items-start justify-between">
+                <h3 className="text-xl font-bold flex justify-between items-top w-full">
+                  {race.event}
+                  {race.video ? (
+                    <Link href={`/races/${formatDateForURL(race.date)}`}>
+                      <ExternalLink />
+                    </Link>
+                  ) : null}
+                </h3>
+              </div>
+              <div className="flex items-center space-x-2">
+                <span className="text-2xl font-bold text-green-600">
+                  {race.timing}
+                </span>
+                {race.pb ? (
+                  <span className="bg-green-100 text-green-800 text-xm font-medium px-2.5 py-0.5 rounded flex items-center gap-1">
+                    PB
+                  </span>
+                ) : null}
+                {race.cr ? (
+                  <span className="bg-yellow-100 text-yellow-800 text-xm font-medium px-2.5 py-0.5 rounded flex items-center gap-1">
+                    CR
+                  </span>
+                ) : null}
+                {race.national_record ? (
+                  <span className="bg-red-100 text-red-800 text-xm font-medium px-2.5 py-0.5 rounded">
+                    NR
+                  </span>
+                ) : null}
+              </div>
+              {race.event_type && (
+                <span className="text-sm text-gray-400">
+                  Event: {race.event_type}
+                </span>
+              )}
             </div>
-            <div className="flex items-center space-x-2">
-              <span className="text-2xl font-bold text-green-600">
-                {race.timing}
-              </span>
-              {race.pb && (
-                <span className="bg-green-100 text-green-800 text-xm font-medium px-2.5 py-0.5 rounded flex items-center gap-1">
-                  PB
-                </span>
-              )}
-              {race.cr && (
-                <span className="bg-yellow-100 text-yellow-800 text-xm font-medium px-2.5 py-0.5 rounded flex items-center gap-1">
-                  CR
-                </span>
-              )}
-              {race.national_record && (
-                <span className="bg-red-100 text-red-800 text-xm font-medium px-2.5 py-0.5 rounded">
-                  NR
-                </span>
-              )}
-            </div>
-            {race.event_type && (
-              <span className="text-sm text-gray-400">
-                Event: {race.event_type}
-              </span>
-            )}
           </VerticalTimelineElement>
         ))}
       </VerticalTimeline>
