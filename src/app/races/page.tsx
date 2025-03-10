@@ -88,6 +88,11 @@ export default function RacesPage() {
                       PB
                     </span>
                   )}
+                  {race.cr && (
+                    <span className="bg-yellow-100 text-yellow-800 text-xm font-medium px-2.5 py-0.5 rounded flex items-center gap-1">
+                      CR
+                    </span>
+                  )}
                   {race.national_record && (
                     <span className="bg-red-100 text-red-800 text-xm font-medium px-2.5 py-0.5 rounded">
                       NR
