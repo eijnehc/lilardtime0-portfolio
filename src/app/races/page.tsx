@@ -73,7 +73,7 @@ export default function RacesPage() {
             }}
           >
             <div className="flex items-start justify-between">
-              <h3 className="text-xl font-bold flex justify-between items-center w-full">
+              <h3 className="text-xl font-bold flex justify-between items-top w-full">
                 {race.event}
                 <Link href={`/races/${formatDateForURL(race.date)}`}>
                   <ExternalLink />
