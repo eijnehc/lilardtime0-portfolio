@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import { motion, useAnimation } from "framer-motion";
 import personalBests from "@/data/personal_best.json";
 import { distanceMap } from "@/utils/distanceMap";
+import { convertTimeToSeconds } from "@/utils/timeUtils";
 
 const RaceGame = () => {
   const [selectedEvent, setSelectedEvent] = useState("");
@@ -35,11 +36,6 @@ const RaceGame = () => {
       time: data.timing,
     }));
 
-  const convertTimeToSeconds = (timeString: string) => {
-    if (typeof timeString !== "string") return 0;
-    const [minutes, seconds] = timeString.split(":").map(String);
-    return Number(minutes) * 60 + Number(seconds);
-  };
 
   // Function to calculate the finish line position based on track width
   const calculateFinishLinePosition = () => {
